@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Html5QrcodePlugin from './reader1';
 
 const VerProducto = () => {
   const [productId, setProductId] = useState('');
@@ -22,22 +23,14 @@ const VerProducto = () => {
       setProducto(null);
       alert('Error en la comunicación con el servidor');
     }
+    useEffect(() => { if (productId) { handleProduct(); } }, [productId]);
   };
+
+ 
 
   return (
     <div>
-      <form onSubmit={handleVerProducto}>
-        <label htmlFor="productId">ID del Producto:</label>
-        <input
-          type="text"
-          id="productId"
-          value={productId}
-          onChange={(e) => setProductId(e.target.value)}
-          required
-        />
-        <button type="submit">Ver Producto</button>
-      </form>
-
+      <Html5QrcodePlugin fps={10} qrbox={250} qrCodeSuccessCallback={(result) => setProductId(result)} />
       {producto && (
         <div>
           <h2>Datos del Producto</h2>
