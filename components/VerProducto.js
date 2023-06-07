@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Html5QrcodePlugin from './reader1';
 
 const VerProducto = () => {
