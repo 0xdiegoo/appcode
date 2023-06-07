@@ -5,8 +5,7 @@ const VerProducto = () => {
   const [productId, setProductId] = useState('');
   const [producto, setProducto] = useState(null);
 
-  const handleVerProducto = async (e) => {
-    e.preventDefault();
+  const handleVerProducto = async () => {
 
     try {
       const response = await fetch(`/api/verProducto?id=${productId}`);
@@ -24,7 +23,7 @@ const VerProducto = () => {
       alert('Error en la comunicación con el servidor');
     }
   };
-  useEffect(() => { if (productId) { handleProduct(); } }, [productId]);
+  useEffect(() => { if (productId) { handleVerProducto(); } }, [productId]);
 
  
 
