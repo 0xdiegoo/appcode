@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import ProductForm from '../components/ProductForm';
 import VerProducto from '../components/VerProducto';
+import Html5QrcodePlugin from '../components/reader1';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,6 +20,7 @@ const Home = () => {
       <h1>Consultar producto</h1>
       <VerProducto/>
       </div>
+      <div> <h1>QR Code Scanner</h1> <Html5QrcodePlugin fps={10} qrbox={250} qrCodeSuccessCallback={(result) => console.log(result)} /> </div>
     </div>
    
   );
