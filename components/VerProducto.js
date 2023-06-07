@@ -23,8 +23,8 @@ const VerProducto = () => {
       setProducto(null);
       alert('Error en la comunicación con el servidor');
     }
-    useEffect(() => { if (productId) { handleProduct(); } }, [productId]);
   };
+  useEffect(() => { if (productId) { handleProduct(); } }, [productId]);
 
  
 
