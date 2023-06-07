@@ -20,7 +20,7 @@ const Home = () => {
       <h1>Consultar producto</h1>
       <VerProducto/>
       </div>
-      <div> <h1>QR Code Scanner</h1> <Html5QrcodePlugin fps={10} qrbox={250} qrCodeSuccessCallback={(result) => console.log(result)} /> </div>
+      <div> <h1>QR Code Scanner</h1> <Html5QrcodePlugin fps={10} qrbox={250} qrCodeSuccessCallback={(result) => alert(result)} /> </div>
     </div>
    
   );
