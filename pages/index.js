@@ -4,7 +4,6 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import ProductForm from '../components/ProductForm';
 import VerProducto from '../components/VerProducto';
-import Scan from '../components/reader'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,9 +19,6 @@ const Home = () => {
       <h1>Consultar producto</h1>
       <VerProducto/>
       </div>
-       <div>
-        <Scan/>
-       </div> 
     </div>
    
   );
